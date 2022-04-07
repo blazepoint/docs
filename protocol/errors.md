@@ -1,0 +1,8 @@
+- `auth/unauthorized`
+- `auth/forbidden`
+- `payload/content-type`
+- `payload/required`
+- `event/invalid-signature`
+- `event/invalid-payload`
+- `account-sync-requested`
+- `schema/*`
