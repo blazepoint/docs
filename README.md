@@ -33,7 +33,11 @@ Blazepoint is similar to [ActivityPub](https://www.w3.org/TR/activitypub/), but 
 
 Blazepoint is similar to [Scuttlebutt](https://ssbc.github.io/scuttlebutt-protocol-guide/), but is less technically sophisticated. This is a good thing, because many of the limitations of Scuttlebutt (lack of multi-device support, content deletion, intensive storage requirements) come from its technical sophistication.
 
-Blazepoint is most similar to [Nostr](https://github.com/fiatjaf/nostr). I agree with almost everything said on their readme about the problems with current social networks and how the solution should work. The two projects are similar enough that I hope they can be merged, or at least learn from one another over time. The difference is that Blazepoint includes a more robust (I think) vision for moderation, content replication, and monetization.
+Blazepoint is most similar to [Nostr](https://github.com/fiatjaf/nostr). I agree with almost everything said on their readme about the problems with current social networks and how the solution should work. The two projects are similar enough that I hope they can be merged, or at least learn from one another over time.
+
+The difference is worth explaining. One way to articulate it is that Blazepoint includes a more robust (I think) vision for moderation, content replication, and monetization. A more theoretical explanation is that while Nostr is meant to be a naive event-stream protocol, where social is just one application of many (see Citadel Dispatch #63), Blazepoint is a social protocol akin to ActivityPub. It is designed to support many different social use-cases, but makes some trade-offs to support focus and scaling on that particular domain.
+
+The implication of this is that Blazepoint could in theory be built on top of Nostr as a second-layer. However, the Nostr spec makes few enough assumptions/prescriptions, that Blazepoint will likely profit from a more opinionated foundation.
 
 # Notes
 
