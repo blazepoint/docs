@@ -1,6 +1,6 @@
-Dogwood is a protocol for building interoperable decentralized social media systems.
+Blazepoint is a protocol for building interoperable decentralized social media systems.
 
-Dogwood does not use blockchains, p2p networking, or DHTs. Instead, it combines the concept of cryptographic identity with a simple client/server gossip protocol to align network topology with the topology of the actual social network.
+Blazepoint does not use blockchains, p2p networking, or DHTs. Instead, it combines the concept of cryptographic identity with a simple client/server gossip protocol to align network topology with the topology of the actual social network.
 
 If we're successful, the result will be a system that supports community-driven moderation, content monetization through the lightning network, and safe communities that do not become echo chambers.
 
@@ -20,26 +20,26 @@ Read the [whitepaper](whitepaper.pdf), or jump right in to the [protocol](protoc
 
 The basic idea is that clients are in control of network replication, while servers do the heavy lifting. Clients indicate content that they think should be replicated from one server to the next by "voting" for it (this may be automatically inferred by client software from upvotes, follows, replies, etc). That vote then gets published to all servers the client is connected to who then request that content from all known peers and publish it to their followers.
 
-It's important that Dogwood is only a protocol; multiple implementations should be able to exist and interoperate. This makes it possible not only to make different design decisions, but also to support multiple social media use cases using a single cryptographic identity. As I see it, there are four main use cases for social media:
+It's important that Blazepoint is only a protocol; multiple implementations should be able to exist and interoperate. This makes it possible not only to make different design decisions, but also to support multiple social media use cases using a single cryptographic identity. As I see it, there are four main use cases for social media:
 
 - Forums are content-focused and support deeply nested, long-running conversations. An example of this is something like Reddit.
 - Groups are more event-focused; groups of people cohere not by common interest, but by occasional participation in a real-life or virtual event. Facebook has gotten this one right.
 - Chat is ideally for very small groups of friends, ideally no more than 10. Chat is not a good default interface for large community participation, since it is not searchable or browsable by topic, and it is unstructured, causing multiple conversations to interleave confusingly.
 - Marketplaces have no need for social cohesion, except maybe geographical or topical. Facebook and Craigslist get this right.
 
-Twitter is a hybrid between forums, groups, and chat, but sacrifices focus for reach. Dogwood will never be able to compete on reach, since Twitter's scale does require a centralized architecture, but it should bring a much better balance between focus and reach.
+Twitter is a hybrid between forums, groups, and chat, but sacrifices focus for reach. Blazepoint will never be able to compete on reach, since Twitter's scale does require a centralized architecture, but it should bring a much better balance between focus and reach.
 
 # Prior Art
 
-Dogwood is similar to [ActivityPub](https://www.w3.org/TR/activitypub/), but takes node operators out of the driver's seat. Replication is not a firehose, it is implemented selectively by listening to user recommendations. On Mastodon, the "network" tab is worthless because content there has nothing to do with the instance you're on. At the same time, the instance you're using doesn't publish content from other instances you're interested in. It's the worst mix of Reddit and Twitter.
+Blazepoint is similar to [ActivityPub](https://www.w3.org/TR/activitypub/), but takes node operators out of the driver's seat. Replication is not a firehose, it is implemented selectively by listening to user recommendations. On Mastodon, the "network" tab is worthless because content there has nothing to do with the instance you're on. At the same time, the instance you're using doesn't publish content from other instances you're interested in. It's the worst mix of Reddit and Twitter.
 
-Dogwood is similar to [Scuttlebutt](https://ssbc.github.io/scuttlebutt-protocol-guide/), but is less technically sophisticated. This is a good thing, because many of the limitations of Scuttlebutt (lack of multi-device support, content deletion, intensive storage requirements) come from its technical sophistication.
+Blazepoint is similar to [Scuttlebutt](https://ssbc.github.io/scuttlebutt-protocol-guide/), but is less technically sophisticated. This is a good thing, because many of the limitations of Scuttlebutt (lack of multi-device support, content deletion, intensive storage requirements) come from its technical sophistication.
 
-Dogwood is most similar to [Nostr](https://github.com/fiatjaf/nostr). I agree with almost everything said on their readme about the problems with current social networks and how the solution should work. The two projects are similar enough that I hope they can be merged, or at least learn from one another over time.
+Blazepoint is most similar to [Nostr](https://github.com/fiatjaf/nostr). I agree with almost everything said on their readme about the problems with current social networks and how the solution should work. The two projects are similar enough that I hope they can be merged, or at least learn from one another over time.
 
-The difference is worth explaining. One way to articulate it is that Dogwood includes a more robust (I think) vision for moderation, content replication, and monetization. A more theoretical explanation is that while Nostr is meant to be a naive event-stream protocol, where social is just one application of many (see Citadel Dispatch #63), Dogwood is a social protocol akin to ActivityPub. It is designed to support many different social use-cases, but makes some trade-offs to support focus and scaling on that particular domain.
+The difference is worth explaining. One way to articulate it is that Blazepoint includes a more robust (I think) vision for moderation, content replication, and monetization. A more theoretical explanation is that while Nostr is meant to be a naive event-stream protocol, where social is just one application of many (see Citadel Dispatch #63), Blazepoint is a social protocol akin to ActivityPub. It is designed to support many different social use-cases, but makes some trade-offs to support focus and scaling on that particular domain.
 
-The implication of this is that Dogwood could in theory be built on top of Nostr as a second-layer. However, the Nostr spec makes few enough assumptions/prescriptions, that Dogwood will likely profit from a more opinionated foundation.
+The implication of this is that Blazepoint could in theory be built on top of Nostr as a second-layer. However, the Nostr spec makes few enough assumptions/prescriptions, that Blazepoint will likely profit from a more opinionated foundation.
 
 # Notes
 
